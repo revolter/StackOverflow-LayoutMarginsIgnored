@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vwk-Jh-139">
+                                <rect key="frame" x="137" y="30" width="100" height="100"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="I9Q-tX-Igu"/>
+                                    <constraint firstAttribute="width" secondItem="Vwk-Jh-139" secondAttribute="height" multiplier="1:1" id="xwV-WI-SEc"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="30" left="30" bottom="30" right="30"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cFX-Da-CyK">
+                                <rect key="frame" x="137" y="283" width="100" height="100"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="POM-IT-Mma">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="RVW-jW-bcV"/>
+                                            <constraint firstAttribute="width" secondItem="POM-IT-Mma" secondAttribute="height" multiplier="1:1" id="TCa-nb-Iw4"/>
+                                        </constraints>
+                                        <edgeInsets key="layoutMargins" top="30" left="30" bottom="30" right="30"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="POM-IT-Mma" firstAttribute="leading" secondItem="cFX-Da-CyK" secondAttribute="leading" id="7bC-g2-D1i"/>
+                                    <constraint firstAttribute="bottom" secondItem="POM-IT-Mma" secondAttribute="bottom" id="93D-28-s56"/>
+                                    <constraint firstAttribute="trailing" secondItem="POM-IT-Mma" secondAttribute="trailing" id="Sha-oQ-o3T"/>
+                                    <constraint firstItem="POM-IT-Mma" firstAttribute="top" secondItem="cFX-Da-CyK" secondAttribute="top" id="zea-kl-BIq"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pGP-xN-2Ee">
+                                <rect key="frame" x="116" y="627" width="142" height="30"/>
+                                <state key="normal" title="Show layout margins"/>
+                                <connections>
+                                    <action selector="onShowLayoutMarginsTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BVI-F3-5Xy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cFX-Da-CyK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5YZ-qn-log"/>
+                            <constraint firstItem="pGP-xN-2Ee" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="83w-wv-771"/>
+                            <constraint firstItem="Vwk-Jh-139" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BY0-E6-ceS"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pGP-xN-2Ee" secondAttribute="bottom" constant="10" id="KqP-Dm-FP8"/>
+                            <constraint firstItem="Vwk-Jh-139" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="PNs-RS-qEw"/>
+                            <constraint firstItem="Vwk-Jh-139" firstAttribute="width" secondItem="Vwk-Jh-139" secondAttribute="height" multiplier="1:1" id="jaA-wc-fxP"/>
+                            <constraint firstItem="cFX-Da-CyK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rF8-Ym-Rqa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="firstView" destination="Vwk-Jh-139" id="yn7-Wk-KTO"/>
+                        <outlet property="secondView" destination="POM-IT-Mma" id="cGZ-BR-dlB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
